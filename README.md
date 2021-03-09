@@ -16,7 +16,7 @@ Vi har foreløpig kun ett skjermbilde. Dette bildet vises når reMarkable er i s
 
 | P Itema grid margin small | P Itema lines margin small |
 | ------------------------- | -------------------------- |
-| ![](./templates/P Itema grid margin small.png)| ![](./templates/P Itema lines margin small.png)|
+| ![](./templates/P%20Itema%20grid%20margin%20small.png)| ![](./templates/P%20Itema%20lines%20margin%20small.png)|
 
 SVG og PNG versjonene av disse filene (de ligger i [./templates](./templatates/)) må kopieres inn i `/usr/share/remarkable/templates/` og `/usr/share/remarkable/templates/templates.json` må redigeres for at malene skal plukkes opp.
 
