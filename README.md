@@ -2,7 +2,7 @@
 
 ![suspended screen](./sleeping_reMarkable.jpeg)
 
-For å kunne endre på systemfilene til reMarkable, så må man ha tilgang til enheten gjennom [SSH](https://remarkablewiki.com/tech/ssh).
+For å kunne endre på systemfilene til reMarkable, så må man ha tilgang til enheten gjennom [SSH](https://remarkablewiki.com/tech/ssh). Man må bruke `scp` for å kopiere over filer og `ssh` for å restarte _xochitl_ etter endringer. Man kan også skru av og på med knappen, men det tar mye lengre tid.
 
 
 ## Skjermbilder
