@@ -4,6 +4,18 @@
 
 For å kunne endre på systemfilene til reMarkable, så må man ha tilgang til enheten gjennom [SSH](https://remarkablewiki.com/tech/ssh). Man må bruke `scp` for å kopiere over filer og `ssh` for å restarte _xochitl_ etter endringer. Man kan også skru av og på med knappen for å ta endringene i bruk, men det tar mye lengre tid.
 
+Går du inn på **Menu > Settings > Copyrights and licenses** finner du helt nederst, i avsnittet **GPLv3 Compliance**, både passord for innlogging og IP-adressen til enheten.
+
+```bash
+❯ ssh root@10.0.0.199
+root@10.0.0.199's password:
+ｒｅＭａｒｋａｂｌｅ
+╺━┓┏━╸┏━┓┏━┓   ┏━┓╻ ╻┏━╸┏━┓┏━┓
+┏━┛┣╸ ┣┳┛┃ ┃   ┗━┓┃ ┃┃╺┓┣━┫┣┳┛
+┗━╸┗━╸╹┗╸┗━┛   ┗━┛┗━┛┗━┛╹ ╹╹┗╸
+reMarkable: ~/ 
+```
+Etter at filer er overført, og du ønsker å aktivere endringene kan fra terminalen til enheten utføre `systemctl restart xochitl`. 
 
 ## Skjermbilder
 
