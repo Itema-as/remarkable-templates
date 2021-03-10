@@ -109,7 +109,7 @@
   </g>
   <g id="Linjer,_oppgaveliste">
     <path d="M157,104.916 L1404,104.916 L1404,1871.584 L157,1871.584 z" fill="#FFFFFF"/>
-    <path d="M156.5,1562.5 L1404,1562.5 L1404,1614.5 L156.5,1614.5 L156.5,1562.5 z" fill="#EEEEEE"/>
+    <path d="M156.5,1562.5 L1199.667,1562.5 L1199.667,1614.5 L156.5,1614.5 L156.5,1562.5 z" fill="#EEEEEE"/>
     <path d="M156.5,104.5 L1404,104.5" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-miterlimit="10"/>
     <path d="M156.5,156.5 L1404,156.5" fill-opacity="0" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10"/>
     <path d="M156.5,208.5 L1404,208.5" fill-opacity="0" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10"/>
@@ -138,8 +138,10 @@
     <path d="M156.5,1406.5 L1404,1406.5" fill-opacity="0" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10"/>
     <path d="M156.5,1458.5 L1404,1458.5" fill-opacity="0" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10"/>
     <path d="M156.5,1510.5 L1404,1510.5" fill-opacity="0" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10"/>
-    <path d="M156.5,1562.5 L1404,1562.5" fill-opacity="0" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10"/>
-    <path d="M156.5,1614.5 L1404,1614.5" fill-opacity="0" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10"/>
+    <path d="M156.5,1562.5 L1199.667,1562.5" fill-opacity="0" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10"/>
+    <path d="M156.5,1614.5 L1199.667,1614.5" fill-opacity="0" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10"/>
+    <path d="M1209.667,1562.5 L1404,1562.5 L1404,1614.803 L1209.667,1614.803 L1209.667,1562.5 z" fill="#EEEEEE"/>
+    <path d="M1209.667,1562.5 L1404,1562.5" fill-opacity="0" stroke="#000000" stroke-width="0.5"/>
     <path d="M226,1668.803 L1199.667,1668.803" fill-opacity="0" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10"/>
     <path d="M226,1720.5 L1199.667,1719.5" fill-opacity="0" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10"/>
     <path d="M1209.667,1668.803 L1404,1668.803" fill-opacity="0" stroke="#000000" stroke-width="0.5"/>
@@ -161,6 +163,11 @@
     <path d="M175,1683.5 L211,1683.5 L211,1719.5 L175,1719.5 L175,1683.5 z" fill-opacity="0" stroke="#000000" stroke-width="1"/>
     <path d="M175,1735.5 L211,1735.5 L211,1771.5 L175,1771.5 L175,1735.5 z" fill-opacity="0" stroke="#000000" stroke-width="1"/>
     <path d="M175,1786.5 L211,1786.5 L211,1822.5 L175,1822.5 L175,1786.5 z" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+    <path d="M1209.667,1614.803 L1404,1614.803" fill-opacity="0" stroke="#000000" stroke-width="0.5"/>
+    <g>
+      <path d="M1585,1546 L1581,1546" fill-opacity="0" stroke="#000000" stroke-width="0.5"/>
+      <path d="M1581,1547.5 L1585,1546 L1581,1544.5 z" fill="#000000" fill-opacity="1" stroke="#000000" stroke-width="0.5" stroke-opacity="1"/>
+    </g>
   </g>
   <g id="Tittel">
     <text transform="matrix(1, 0, 0, 1, 1279.667, 69.583)">
