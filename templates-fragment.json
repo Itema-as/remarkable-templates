@@ -1,0 +1,28 @@
+{
+  "templates": [
+  {
+    "name": "Itema grid margin small",
+    "filename": "P Itema grid margin small",
+    "iconCode": "\ue99e",
+    "categories": [
+    "Grids"
+      ]
+    },
+  {
+    "name": "Itema lines margin small",
+    "filename": "P Itema lines margin small",
+    "iconCode": "\ue9a8",
+    "categories": [
+    "Lines"
+      ]
+    },
+  {
+    "name": "Itema lines checklist small",
+    "filename": "P Itema lines checklist small",
+    "iconCode": "\ue98f",
+    "categories": [
+      "Lines"
+      ]
+    }
+  ]
+}
