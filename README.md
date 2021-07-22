@@ -56,15 +56,17 @@ Om du har tilordnet enheten en fast IP-adresse kan opplasting og oppdatering av 
 $ ./install.sh
 😄  reMarkable Template Installer v0.1
 
+😄  reMarkable Template Installer v0.1
+
 Plugg din reMarkable til strømforsyningen slik at den raskere kobler seg opp til
 det trådløse nettet; skru den på og trykk [SPACE] for å fortsette.
 
 🔓  Benytter eksisterende SSH nøkkelpar
 ⬇️  Laster ned malbeskrivelser
-🧩  Kombinerer malbeskrivelser
+🧩  Sammenstiller malbeskrivelser
 ⬆️  Laster opp maler og malbeskrivelser
-🔄  Restarter Xochitl for å aktivere oppdaterte maler
-🥰  Kos deg!
+🔄  Starter om Xochitl for å iverksette endringene
+🥰  Kos deg med oppdaterte maler!
 ```
 
 Merk at ved første gangs kjøring av skriptet må man oppgi IP-adressen til enheten, samt passordet til rotbrukeren. Denne informasjonen finner du ved å gå inn på **Menu > Settings > Copyrights and licenses**. Helt nederst, i avsnittet **GPLv3 Compliance**, er det oppgitt både passord for innlogging og IP-adressen til enheten.
