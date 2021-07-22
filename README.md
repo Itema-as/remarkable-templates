@@ -56,8 +56,6 @@ Om du har tilordnet enheten en fast IP-adresse kan opplasting og oppdatering av 
 $ ./install.sh
 😄  reMarkable Template Installer v0.1
 
-😄  reMarkable Template Installer v0.1
-
 Plugg din reMarkable til strømforsyningen slik at den raskere kobler seg opp til
 det trådløse nettet; skru den på og trykk [SPACE] for å fortsette.
 
