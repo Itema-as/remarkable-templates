@@ -63,14 +63,14 @@ cp templates-remarkable.json templates-backup.$current_time
 # Kombiner malfilene til én – merk at disse blir sortert alfabetisk etter navn
 # og at maler som evt. har blitt fjernet fra templates-fragment.json ikke vil
 # bli fjernet fra templates.json
-echo -e "🧩  Kombinerer malbeskrivelser"
+echo -e "🧩  Sammenstiller malbeskrivelser"
 rm -f ./templates.json
-jq -s '{templates: ([.[][]] | flatten | unique_by(.name))}' templates-remarkable.json templates-fragment.json > templates.json 
+jq -s '{templates: ([.[][]] | flatten | unique_by(.filename))}' templates-remarkable.json templates-fragment.json > templates.json 
 
 # Last opp fil med nye malbeskrivelser samt alle malene
 echo -e "⬆️  Laster opp maler og malbeskrivelser"
 scp -q -i $KEYFILE ./templates.json root@$IP_ADDRESS:/usr/share/remarkable/templates/templates.json
 scp -q -i $KEYFILE ./templates/* root@$IP_ADDRESS:/usr/share/remarkable/templates/
-echo -e "🔄  Restarter Xochitl for å aktivere oppdaterte maler"
+echo -e "🔄  Starter om ${TEXT}Xochitl${NC} for å iverksette endringene"
 ssh -i $KEYFILE  root@$IP_ADDRESS -f 'systemctl restart xochitl'
-echo -e "🥰  Kos deg!"
+echo -e "🥰  Kos deg med oppdaterte maler!"
