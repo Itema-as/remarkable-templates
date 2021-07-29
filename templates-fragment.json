@@ -1,7 +1,7 @@
 {
   "templates": [
   {
-    "name": "Itema grid margin small",
+    "name": "Itema grid margin",
     "filename": "P Itema grid margin small",
     "iconCode": "\ue99e",
     "categories": [
@@ -9,7 +9,7 @@
       ]
     },
   {
-    "name": "Itema lines margin small",
+    "name": "Itema lines margin",
     "filename": "P Itema lines margin small",
     "iconCode": "\ue9a8",
     "categories": [
@@ -17,11 +17,27 @@
       ]
     },
   {
-    "name": "Itema lines checklist small",
+    "name": "Itema lines checklist",
     "filename": "P Itema lines checklist small",
     "iconCode": "\ue98f",
     "categories": [
       "Lines"
+      ]
+    },
+  {
+    "name": "Itema blank checklist",
+    "filename": "P Itema blank checklist small",
+    "iconCode": "\ue9fe",
+    "categories": [
+      "Life/organize"
+      ]
+    },
+  {
+    "name": "Itema week plan",
+    "filename": "P Itema week",
+    "iconCode": "\ue9da",
+    "categories": [
+      "Life/organize"
       ]
     }
   ]
