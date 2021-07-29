@@ -1,4 +1,4 @@
-# Itema-tilpassede skjermer og maler for reMarkable
+# Itema-tilpassede skjermbilder og maler for reMarkable
 
 ![suspended screen](./sleeping_reMarkable.jpeg)
 
@@ -13,38 +13,13 @@ Alle disse malene er laget for at man skal kunne bytte mellom de uten at ting fl
 
 Merk at reMarkable strengt tatt ikke støtter tilpassede maler, men at det stort sett ikke medfører noen ulemper. Bortsett fra når man bruker "desktop"-applikasjonen. Den har ikke disse malene innebygd og vil derfor klage ved fremvisning. Hvis man skal sende en side eller fler som PDF til noen andre, er det best å gjøre dette fra reMarkable. Da får man med seg riktig mal.
 
-| P Itema grid margin small | P Itema lines margin small | P Itema lines checklist small |
-| ------------------------- | -------------------------- | ----------------------------- |
+| Itema grid margin | Itema lines margin | Itema lines checklist |
+| ----------------- | ------------------ | --------------------- |
 | ![](./templates/P%20Itema%20grid%20margin%20small.png)| ![](./templates/P%20Itema%20lines%20margin%20small.png)| ![](./templates/P%20Itema%20lines%20checklist%20small.png)|
+| Itema blank checklist | Itema week plan | |
+| ![](./templates/P%20Itema%20blank%20checklist%20small.png)| ![](./templates/P%20Itema%20week.png)| |
 
-SVG og PNG versjonene av disse filene (de ligger i [./templates](./templates/)) må kopieres inn i `/usr/share/remarkable/templates/` og `/usr/share/remarkable/templates/templates.json` må redigeres for at malene skal plukkes opp. Følgende linjer med tekst må legges inn.
-
-```
-  {
-    "name": "Itema grid margin small",
-    "filename": "P Itema grid margin small",
-    "iconCode": "\ue99e",
-    "categories": [
-    "Grids"
-      ]
-    },
-  {
-    "name": "Itema lines margin small",
-    "filename": "P Itema lines margin small",
-    "iconCode": "\ue9a8",
-    "categories": [
-    "Lines"
-      ]
-    },
-  {
-    "name": "Itema lines checklist small",
-    "filename": "P Itema lines checklist small",
-    "iconCode": "\ue98f",
-    "categories": [
-      "Lines"
-      ]
-    },
-```
+SVG og PNG versjonene av disse filene (de ligger i [./templates](./templates/)) må kopieres inn i `/usr/share/remarkable/templates/` og `/usr/share/remarkable/templates/templates.json` må redigeres for at malene skal plukkes opp. Her må teksten som ligger i [./templates-fragment.json](./templates-fragment.json/) flettes inn.
 
 ## Installasjon
 
