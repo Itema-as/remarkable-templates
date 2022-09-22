@@ -6,13 +6,14 @@ PROMPT='\033[0;34m'
 NC='\033[0m'
 FILE=~/.reMarkable-template-installer
 KEYFILE=~/.ssh/id_rsa_reMarkable
+SLEEP_TEXT="Denne enheten tilhører\nNavn Navnesen, nn@dev.null"
 
 echo -e "😄  reMarkable Template Installer v0.1\n"
 
 if ! command -v jq &> /dev/null
 then
-    echo "✋  Du må installere kommandolinjeverktøyet 'jq' for å fortsette"
-    exit 1
+	echo "✋  Du må installere kommandolinjeverktøyet 'jq' for å fortsette"
+	exit 1
 fi
 
 # Lag en pause slik at brukeren kan gjøre seg klar
@@ -20,10 +21,25 @@ echo -e "${TEXT}Plugg din reMarkable til strømforsyningen slik at den raskere k
 echo -e "${TEXT}det trådløse nettet; skru den på og trykk [SPACE] for å fortsette.${NC}\n"
 read -n1 -s -r key
 
+function updateSleepScreen() {
+	rm -f suspended.png
+	# Riktig font blir av en eller annen grunn ikke plukket
+	convert screens/suspended.png -gravity Center -pointsize 30 \
+		-font Helvetica-Neue-Bold -pointsize 36 -annotate -400+850 "$SLEEP_TEXT" suspended.png
+}
+
+function getSleepScreenText() {
+	echo -e -n "${PROMPT}Hvilken tekst vil du ha på pausebildet [$SLEEP_TEXT]: ${NC}" 
+	read SLEEP_TEXT
+	echo $IP_ADDRESS | base64 > ~/.reMarkable-template-installer
+	echo $SLEEP_TEXT >> ~/.reMarkable-template-installer
+}
+
 function getCredentials() {
 	echo -e -n "${PROMPT}Hva er IP-adressen til din reMarkable: ${NC}" 
 	read IP_ADDRESS
 	echo $IP_ADDRESS | base64 > ~/.reMarkable-template-installer
+	echo $SLEEP_TEXT >> ~/.reMarkable-template-installer
 }
 
 if test -f "$KEYFILE"; then
@@ -45,11 +61,16 @@ else
 		cat >> .ssh/authorized_keys" < $KEYFILE.pub
 fi
 
-# Les inn IP-adressen fra tidligere
+# Les inn data fra tidligere
 if test -f "$FILE"; then
-	IFS=$'\r\n' GLOBIGNORE='*' command eval  'XYZ=($(cat $FILE))'
+	IFS=$'\r\n' GLOBIGNORE='*' command eval 'XYZ=($(cat $FILE))'
 	IP_ADDRESS=`echo ${XYZ[0]} | base64 -d`
+	SLEEP_TEXT=${XYZ[1]}
 fi
+if [ -z "$SLEEP_TEXT" ]; then
+	getSleepScreenText
+fi
+updateSleepScreen
 
 # Last ned malbeskrivelsene
 echo -e "⬇️  Laster ned malbeskrivelser"
@@ -71,6 +92,8 @@ jq -s '{templates: ([.[][]] | flatten | unique_by(.filename))}' templates-remark
 echo -e "⬆️  Laster opp maler og malbeskrivelser"
 scp -q -i $KEYFILE ./templates.json root@$IP_ADDRESS:/usr/share/remarkable/templates/templates.json
 scp -q -i $KEYFILE ./templates/* root@$IP_ADDRESS:/usr/share/remarkable/templates/
+echo -e "⬆️  Laster opp pausebilde"
+scp -q -i $KEYFILE suspended.png root@$IP_ADDRESS:/usr/share/remarkable/suspended.png
 echo -e "🔄  Starter om ${TEXT}Xochitl${NC} for å iverksette endringene"
 ssh -i $KEYFILE  root@$IP_ADDRESS -f 'systemctl restart xochitl'
 echo -e "🥰  Kos deg med oppdaterte maler!"
